@@ -1,9 +1,9 @@
 job('ejemplo2-job-DSL') {
 	description('Job DSL de ejemplo para el curso de Jenkins')
   	scm {
-      		git('https://github.com/macloujulian/jenkins.job.parametrizado.git', 'main') { node ->
-        		node / gitConfigName('macloujulian')
-        		node / gitConfigEmail('macloujulian@gmail.com')
+      		git('https://github.com/Betty-Arias/jenkins.job.parametrizado.git', 'main') { node ->
+        		node / gitConfigName('Betty-Arias')
+        		node / gitConfigEmail('bttyloha@gmail.com')
       		}
     	} 
   	parameters {
@@ -18,6 +18,6 @@ job('ejemplo2-job-DSL') {
     		shell("bash jobscript.sh")
     	}
   	publishers {
-      		mailer('macloujulian@gmail.com', true, true)
+      		mailer('bettyarias3030@gmail.com', true, true)
     	}
 }
